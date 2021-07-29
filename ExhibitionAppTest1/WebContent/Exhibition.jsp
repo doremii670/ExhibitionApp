@@ -26,7 +26,7 @@ if(rs.next()){
 		String docent = rs.getString("docent");
 %>
 <div class="col-md-12">
-<form action="ExhibitionModiProc.jsp" method="post" name="ExFrm<%=exidx %>">
+<form action="ExhibitionModiProc.jsp?exidx=<%=exidx %>" method="post" name="ExFrm<%=exidx %>">
 <table class="table">
 <tr class="active">
 	<th>전시회고유코드</th>
@@ -36,7 +36,9 @@ if(rs.next()){
 	<th>관람등급</th>
 </tr>
 <tr>
-	<td><input type="text" name="exidx" value="<%=exidx %>" class="inputStyle" disabled/></td>
+	<td>
+	<input type="text"  value="<%=exidx %>" class="inputStyle" disabled/>
+	 </td>
 	<td colspan="2">
 	<input type="text" name="extitle" value="<%=extitle %>" class="inputStyle"/>
 	</td>
@@ -67,7 +69,7 @@ if(rs.next()){
 <tr>
 	<th colspan="1"  class="active">전시회 설명</th>
 	<td colspan="5">
-		<textarea rows="3" name="texts"><%=texts %></textarea>
+		<textarea rows="4" name="texts"><%=texts %></textarea>
 	</td>
 </tr>
 </table>
