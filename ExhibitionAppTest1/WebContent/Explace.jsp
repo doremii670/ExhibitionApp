@@ -36,12 +36,16 @@
 				<td><%=placename %></td>
 				<td><%=rlocation %></td>
 				<td><%=contactno %></td>
-				<td><%=times %></td>
+				<!-- 
+					times = s09e19
+							012345
+				-->
+				<td><%=times.substring(1,3) %> 시 <%=times.substring(4,6) %>까지</td>
 				<td><%=holiday %></td>
 				<td>
-				<form action="">
+				<form action="ExplaceModiFrm2.jsp" method="get">
 					<input type="hidden" value="<%=codes %>" name="CodeChk"/>
-					<input type="submit" value="수정" name="btn btn-su"/>
+					<input type="submit" value="수정" name="btn btn-success"/>
 				</form>
 				</td>
 			</tr>
