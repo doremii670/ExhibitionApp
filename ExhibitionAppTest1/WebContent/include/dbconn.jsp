@@ -2,7 +2,6 @@
     pageEncoding="UTF-8"%>
 <%@ page import="java.sql.*"%>
 <%
-request.setCharacterEncoding("utf-8");	
 
 Connection conn = null;
 
@@ -17,7 +16,7 @@ ResultSet rs = null;
 
 try{
 	Class.forName(driver);
-	conn = DriverManager.getConnection(url, "root", "1234");
+	conn = DriverManager.getConnection(url,"root","1234");
 	
 }catch (Exception ex){
 	out.println("<h3>DB연결 실패</h3>");
